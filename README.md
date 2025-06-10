@@ -100,7 +100,7 @@ git clone https://github.com/<tên-người-dùng>/Wacth_shop.git
      $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
 #### 4. 🚀 Chạy ứng dụng
 ##### Nếu dùng XAMPP → truy cập:
-     http://localhost/Wacth_shop/index.php
+     http://localhost/Wacth_shop/home.php
 
 ##### Nếu dùng Laragon → có thể tạo tên miền ảo:
      http://watchshop.test
