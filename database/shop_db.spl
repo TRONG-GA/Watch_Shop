@@ -1,0 +1,81 @@
+
+CREATE TABLE `cart` (
+  `id` int(100) NOT NULL,
+  `user_id` int(100) NOT NULL,
+  `pid` int(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `price` int(100) NOT NULL,
+  `quantity` int(100) NOT NULL,
+  `image` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`id`, `user_id`, `pid`, `name`, `price`, `quantity`, `image`) VALUES
+(129, 14, 16, 'lavendor rose', 13, 1, 'lavendor rose.jpg'),
+(130, 14, 18, 'red tulipa', 11, 1, 'red tulipa.jpg'),
+(131, 14, 15, 'cottage rose', 15, 1, 'cottage rose.jpg'),
+(132, 15, 13, 'pink rose', 10, 1, 'pink roses.jpg'),
+(133, 15, 15, 'cottage rose', 15, 1, 'cottage rose.jpg'),
+(134, 15, 16, 'lavendor rose', 13, 3, 'lavendor rose.jpg'),
+(160, 20, 90, 'Nhẫn bạc nữ đính kim cương Moissanite Eleanor LILI_054801', 44, 2, 'a20.jpg'),
+(161, 16, 3, 'Cá Betta', 10000, 1, 'a9.jpg'),
+(162, 16, 6, 'Cá Hồng Két', 12000, 1, 'a12.jpg'),
+(163, 16, 10, 'Cá Chuột Mỹ', 7000, 1, 'a16.jpg'),
+(164, 23, 3, 'Microphone thu âm không dây Boya BY-V2 V2.0 (Lightning, 2 Mic)', 1000000, 1, 'a9.jpg'),
+(165, 23, 19, 'Micro Karaoke tích hợp loa Bluetooth Monster M98 - Chính hãng', 5000000, 1, 'a25.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `message`
+--
+
+CREATE TABLE `message` (
+  `id` int(100) NOT NULL,
+  `user_id` int(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `number` varchar(12) NOT NULL,
+  `message` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `message`
+--
+
+INSERT INTO `message` (`id`, `user_id`, `name`, `email`, `number`, `message`) VALUES
+(13, 14, 'shaikh anas', 'shaikh@gmail.com', '0987654321', 'hi, how are you?');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(100) NOT NULL,
+  `user_id` int(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `number` varchar(12) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `method` varchar(50) NOT NULL,
+  `address` varchar(500) NOT NULL,
+  `total_products` varchar(1000) NOT NULL,
+  `total_price` int(100) NOT NULL,
+  `placed_on` varchar(50) NOT NULL,
+  `payment_status` varchar(20) NOT NULL DEFAULT 'pending'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `name`, `number`, `email`, `method`, `address`, `total_products`, `total_price`, `placed_on`, `payment_status`) VALUES
+(24, 16, 'OMEGA', '332', 'zzzz@gmail.com', 'cash on delivery', 'flat no. A, D, B, VIỆT NAM - 222222', ', Bông tai bạc nữ tròn đính đá CZ hình chú bướm xinh LILI_184545 (2) , Dây chuyền bạc nữ đính đá CZ hình trái tim Heart Of The Sea LILI_413928 (3) ', 24978, '18-Sep-2024', 'pending');
+
+-- --------------------------------------------------------
+
+--
