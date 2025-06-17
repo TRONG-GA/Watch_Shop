@@ -83,15 +83,15 @@ git clone https://github.com/<tên-người-dùng>/Wacth_shop.git
 
 ##### Sau đó import file SQL:
  
-     Từ phpMyAdmin → Import → chọn file: database/watchshop.sql
+     Từ phpMyAdmin → Import → chọn file: database/shop_db.sql
 #### 3⚙️ Cấu hình kết nối cơ sở dữ liệu
 ##### Mở file cấu hình:
-    config/db.php
+    config/config.php
 
 ##### Sửa thông tin kết nối như sau:
      $host = 'localhost';
    
-     $dbname = 'watchshop';
+     $dbname = 'shop_db';
    
      $user = 'root';
    
@@ -108,4 +108,11 @@ git clone https://github.com/<tên-người-dùng>/Wacth_shop.git
 ###### ✅ Giao diện sẽ hiển thị trang chính, bạn có thể:
 ###### - Đăng ký tài khoản người dùng
 ###### - Đăng nhập để mua hàng
-###### - Vào trang admin để quản lý (nếu có tài khoản quyền admin)
+###### - Vào trang admin để quản lý (đăng nhập tài khoản admin) 
+#### 5. Hướng dẫn đăng nhập tài khoản admin
+##### - Vào trang đăng nhập.
+##### - Tích vào dòng "Đăng nhập như admin".
+##### - Đăng nhập theo tài khoản sau:
+######    . account: test@gmail.com
+######    . password: 123456
+
